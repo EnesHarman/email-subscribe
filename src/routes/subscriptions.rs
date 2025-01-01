@@ -1,6 +1,5 @@
-use actix_web::cookie::time::OffsetDateTime;
 use actix_web::{web, HttpResponse};
-use chrono::{DateTime, Utc};
+use chrono::Utc;
 use sqlx::PgPool;
 use uuid::Uuid;
 
