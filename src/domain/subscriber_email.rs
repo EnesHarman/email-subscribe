@@ -12,7 +12,7 @@ impl SubscriberEmail {
 }
 
 impl AsRef<str> for SubscriberEmail {
-    fn as_ref(&self) -> &str {
+        fn as_ref(&self) -> &str {
         &self.0
     }
 }
