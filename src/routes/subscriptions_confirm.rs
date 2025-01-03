@@ -3,8 +3,6 @@ use serde::Deserialize;
 use sqlx::PgPool;
 use uuid::Uuid;
 
-use crate::startup::ApplicationBaseUrl;
-
 #[derive(Deserialize)]
 pub struct Parameters {
     subscription_token: String,
