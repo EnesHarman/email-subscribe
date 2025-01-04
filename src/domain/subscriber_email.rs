@@ -12,8 +12,14 @@ impl SubscriberEmail {
 }
 
 impl AsRef<str> for SubscriberEmail {
-        fn as_ref(&self) -> &str {
+    fn as_ref(&self) -> &str {
         &self.0
+    }
+}
+
+impl std::fmt::Display for SubscriberEmail {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        self.0.fmt(f)
     }
 }
 
@@ -50,7 +56,6 @@ mod tests {
         let email = "@domain.com".to_string();
         assert_err!(SubscriberEmail::parse(email));
     }
-
 
     #[quickcheck_macros::quickcheck]
     fn valid_emails_are_parsed_successfully(valid_email: ValidEmailFixture) -> bool {
